@@ -5,7 +5,7 @@ import Title from "./components/Title";
 import Youtube from "./components/Youtube";
 import Section2 from "./components/section2";
 import Section3 from "./components/section3";
-import Section4 from "./components/Section4";
+import Section4 from "./components/section4";
 import Section5 from "./components/section5";
 import Section6 from './components/section6';
 import Section0 from "./components/section0";
