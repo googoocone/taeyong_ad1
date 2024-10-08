@@ -1,0 +1,39 @@
+.container{
+  width: 100%;
+  padding: 40px 20px;
+}
+
+.top{
+  width: 100%;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.5);
+}
+.bottom{
+  width: 100%;
+  margin-top: 20px;
+}
+
+.title{
+  margin-top: 20px;
+  font-size: 24px;
+  color: #B7958B;
+  font-weight: bold;
+}
+
+.description{
+  margin-top: 5px;
+  color: #B7958B;
+  font-size: 18px ;
+}
+
+.img{
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 600px) {
+  .container{
+    width: 100%;
+    padding: 40px 20px;
+    background-color: #222222;
+  }
+}
