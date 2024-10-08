@@ -9,10 +9,27 @@ import Section4 from "./components/section4";
 import Section5 from "./components/section5";
 import Section6 from './components/section6';
 import Section0 from "./components/section0";
+import Script from 'next/script';
 
 export default function Home() {
   return (
     <>
+      {/* Google Tag Manager Script */}
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=AW-16722031338"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'AW-16722031338');
+        `}
+      </Script>
+
       <div className={styles.homeContainer}>
         <Title></Title>
         <Youtube></Youtube>
