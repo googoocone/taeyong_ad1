@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 import Footer from "./components/Footer";
 
@@ -22,9 +23,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <GoogleTagManager gtmId="GTM-KWTFX5P9" />
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
-
       </body>
     </html>
   );

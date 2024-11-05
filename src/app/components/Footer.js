@@ -1,8 +1,9 @@
 // components/Footer.js
-'use client'
+"use client";
 import React, { useState } from "react";
 import styles from "./Footer.module.css";
 import { sendEmail } from "../../../lib/action"; // sendEmail 함수 임포트
+import { sendGTMEvent } from "@next/third-parties/google";
 
 const Footer = () => {
   // 폼 데이터 상태 관리
@@ -25,8 +26,13 @@ const Footer = () => {
     try {
       // 폼 데이터를 서버에 전송
       const result = await sendEmail(new FormData(e.target));
-      console.log(result.message);
+
       alert("상담 신청이 접수되었습니다.");
+      sendGTMEvent({
+        event: "conversion", // 이벤트 이름
+        value: "lead", // 전환 유형 (예: 리드 전환)
+        label: "consultation_request", // 이벤트 레이블 (예: 상담 요청)
+      });
     } catch (error) {
       console.error(error);
       alert("이메일 전송에 실패했습니다. 다시 시도해주세요.");
@@ -37,7 +43,8 @@ const Footer = () => {
     <div className={styles.footer}>
       <div className={styles.footerContainer}>
         <div className={styles.footerTitle}>
-          <span className={styles.brownFont}>딱! 한번의</span> 전문상담으로 채무를 해결해보세요.
+          <span className={styles.brownFont}>딱! 한번의</span> 전문상담으로
+          채무를 해결해보세요.
         </div>
         <div className={styles.footerForm}>
           <form className={styles.form} onSubmit={handleSubmit}>
@@ -62,7 +69,6 @@ const Footer = () => {
                   value={formData.number}
                   onChange={handleChange}
                 />
-
               </div>
               <div>
                 <button type="submit" className={styles.button}>
