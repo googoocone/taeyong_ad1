@@ -1,6 +1,5 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import { GoogleTagManager } from "@next/third-parties/google";
 
 import Footer from "./components/Footer";
 import Head from "next/head";
