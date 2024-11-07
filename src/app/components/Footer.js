@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import styles from "./Footer.module.css";
 import { sendEmail } from "../../../lib/action"; // sendEmail 함수 임포트
-import { sendGTMEvent } from "@next/third-parties/google";
 
 const Footer = () => {
   // 폼 데이터 상태 관리
@@ -28,11 +27,6 @@ const Footer = () => {
       const result = await sendEmail(new FormData(e.target));
 
       alert("상담 신청이 접수되었습니다.");
-      sendGTMEvent({
-        event: "conversion", // 이벤트 이름
-        value: "lead", // 전환 유형 (예: 리드 전환)
-        label: "consultation_request", // 이벤트 레이블 (예: 상담 요청)
-      });
     } catch (error) {
       console.error(error);
       alert("이메일 전송에 실패했습니다. 다시 시도해주세요.");
