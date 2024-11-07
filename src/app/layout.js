@@ -3,6 +3,7 @@ import "./globals.css";
 import { GoogleTagManager } from "@next/third-parties/google";
 
 import Footer from "./components/Footer";
+import Head from "next/head";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,8 +24,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <GoogleTagManager gtmId="GTM-KWTFX5P9" />
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body>
+        {/* Google Tag Manager (noscript) - Body */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-P9LKW4FQ"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
         {children}
       </body>
     </html>
