@@ -22,10 +22,16 @@ const Footer = () => {
   // 폼 제출 핸들러
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // 전화번호가 11자리가 아닐 경우 경고 메시지
+    if (formData.number.length !== 11) {
+      alert("전화번호는 11자리여야 합니다.");
+      return;
+    }
+
     try {
       // 폼 데이터를 서버에 전송
       const result = await sendEmail(new FormData(e.target));
-
       alert("상담 신청이 접수되었습니다.");
     } catch (error) {
       console.error(error);
