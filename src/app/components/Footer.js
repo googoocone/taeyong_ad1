@@ -43,6 +43,7 @@ const Footer = () => {
     <div className={styles.footer}>
       <div className={styles.footerContainer}>
         <div className={styles.footerTitle}>
+          <h3 className={styles.brownFont}>즉시 상담 : 070-4138-0508</h3>
           <span className={styles.brownFont}>딱! 한번의</span> 전문상담으로
           채무를 해결해보세요.
         </div>

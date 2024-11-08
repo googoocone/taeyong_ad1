@@ -5,7 +5,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 200px;
+  height: 300px;
   max-width: 600px; /* Ensures max width for PC */
   background-color: #222222;
   padding: 10px 10px;
@@ -15,14 +15,14 @@
   z-index: 1000; /* Ensures footer is always on top */
 }
 
-.footerTitle{
+.footerTitle {
   text-align: center;
   margin: 10px 0;
   font-size: 24px;
   font-weight: bold;
   color: white;
 }
-.footertel{
+.footertel {
   text-align: center;
   margin: 10px 0;
   font-size: 24px;
@@ -33,14 +33,12 @@
 .form {
   display: flex;
   flex-wrap: wrap;
-
 }
 
-.inputContainer{
+.inputContainer {
   display: flex;
   gap: 5px; /* Space between input elements */
 }
-
 
 .input {
   width: 270px;
@@ -52,21 +50,20 @@
   margin-bottom: 8px;
 }
 
-
 .button {
   width: 100%;
   height: 40px;
 
   border: none;
-  background-color: #4F4645;
+  background-color: #4f4645;
   color: #fff;
   cursor: pointer;
   border-radius: 4px;
   font-size: 18px;
   font-weight: bold;
 }
-.brownFont{
-  color: #B7958B;
+.brownFont {
+  color: #b7958b;
 }
 
 /* For larger screens, center the footer */
@@ -82,8 +79,8 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 180px;
-    
+    height: 220px;
+
     background-color: #222222;
     padding: 10px 10px;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
@@ -92,7 +89,7 @@
     z-index: 1000; /* Ensures footer is always on top */
   }
 
-  .footerContainer{
+  .footerContainer {
     width: 100%;
     display: flex;
     align-items: center;
@@ -100,7 +97,7 @@
     flex-direction: column;
   }
 
-  .footerTitle{
+  .footerTitle {
     width: 100%;
     text-align: left;
     margin: 10px 0;
@@ -108,7 +105,7 @@
     font-weight: bold;
     color: white;
   }
-  .footertel{
+  .footertel {
     text-align: left;
     margin: 10px 0;
     font-size: 1.1rem;
@@ -121,44 +118,42 @@
     width: 100%;
   }
 
-  .footerForm{
+  .footerForm {
     width: 100%;
   }
-  .flexBox{
+  .flexBox {
     width: 100%;
   }
-  
-  .inputContainer{
+
+  .inputContainer {
     display: flex;
     width: 100%;
     gap: 5px; /* Space between input elements */
   }
-  
-  
+
   .input {
     width: 50%;
     height: 40px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-  
+
     margin-bottom: 8px;
   }
-  
-  
+
   .button {
     width: 100%;
     height: 40px;
 
     border: none;
-    background-color: #4F4645;
+    background-color: #4f4645;
     color: #fff;
     cursor: pointer;
     border-radius: 4px;
     font-size: 18px;
     font-weight: bold;
   }
-  .brownFont{
-    color: #B7958B;
+  .brownFont {
+    color: #b7958b;
   }
 }
