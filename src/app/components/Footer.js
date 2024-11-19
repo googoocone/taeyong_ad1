@@ -31,11 +31,19 @@ const Footer = () => {
 
     try {
       // 폼 데이터를 서버에 전송
+      alert("상담 신청이 접수되었습니다. 곧 연락드리겠습니다");
       const result = await sendEmail(new FormData(e.target));
-      alert("상담 신청이 접수되었습니다.");
+      gtag_report_conversion();
     } catch (error) {
-      console.error(error);
       alert("이메일 전송에 실패했습니다. 다시 시도해주세요.");
+      console.error(error);
+    }
+  };
+  const gtag_report_conversion = () => {
+    if (typeof window !== "undefined" && typeof gtag === "function") {
+      gtag("event", "conversion", {
+        send_to: "AW-16722031338/cGQFCIa3quYZEOrl16U-",
+      });
     }
   };
 

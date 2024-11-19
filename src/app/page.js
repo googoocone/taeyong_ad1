@@ -14,6 +14,18 @@ import Script from "next/script";
 export default function Home() {
   return (
     <>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-16722031338"
+        strategy="afterInteractive"
+      />
+      <Script id="google-ads" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-16722031338');
+        `}
+      </Script>
       <div className={styles.homeContainer}>
         <Title></Title>
         <Youtube></Youtube>
