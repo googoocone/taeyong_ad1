@@ -8,6 +8,7 @@ import Section3 from "./components/section3";
 import Section4 from "./components/section4";
 import Section5 from "./components/section5";
 import Section6 from "./components/section6";
+import Section7 from "./components/section7";
 import Section0 from "./components/section0";
 import Script from "next/script";
 
@@ -31,6 +32,7 @@ export default function Home() {
         <Youtube></Youtube>
         <Section2></Section2>
         <Section3></Section3>
+        <Section7></Section7>
         <Section4></Section4>
         <Section5></Section5>
         <Section6></Section6>
